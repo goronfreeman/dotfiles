@@ -77,7 +77,7 @@ function env_default() {
     export "$1=$2"       && return 3
 }
 
-# A better git clone
+# A better git clonemas
 # clones a repository, cds into it, and opens it in my editor.
 #
 # Based on https://github.com/stephenplusplus/dots/blob/master/.bash_profile#L68 by @stephenplusplus
