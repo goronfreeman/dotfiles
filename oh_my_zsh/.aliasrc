@@ -10,9 +10,11 @@ alias gco="g checkout"
 alias gc="g commit -m"
 alias ga="g add"
 alias gm="g merge"
+alias gmt="g mergetool"
 alias gp="g push"
 alias gpo="gp -u origin"
 alias gb="gco -b"
+alias gup="g pull --rebase"
 
 # rails
 alias rc="be rails c"
