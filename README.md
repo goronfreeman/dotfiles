@@ -49,6 +49,8 @@
 
 `ln -s ~/github/dotfiles/oh_my_zsh/.zshenv ~`
 
+`ln -s ~/github/dotfiles/oh_my_zsh/.zshrc ~`
+
 `ln -s ~/github/dotfiles/oh_my_zsh/functions.zsh ~/.oh-my-zsh/lib/`
 
 #### 12. restore Atom settings
