@@ -35,7 +35,9 @@
 * iStat Menus
 
 #### 9. set up GitHub credentials
-[Generating SSH keys](https://help.github.com/articles/generating-ssh-keys/)
+* [Generating SSH keys](https://help.github.com/articles/generating-ssh-keys/)
+
+* restore .ssh directory
 
 #### 10. clone dotfiles repo
 `cd github`
