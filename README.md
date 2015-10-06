@@ -45,6 +45,8 @@
 `git clone git@github.com:goronfreeman/dotfiles.git`
 
 #### 11. symlink files
+`ln -s ~/github/dotfiles/.scss-lint.yml ~`
+
 `ln -s ~/github/dotfiles/oh_my_zsh/.aliasrc ~`
 
 `ln -s ~/github/dotfiles/oh_my_zsh/.zshenv ~`
