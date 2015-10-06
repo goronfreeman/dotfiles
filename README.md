@@ -5,52 +5,15 @@
 #### 2. install oh-my-zsh
 `sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
 
-#### 3. install homebrew
-`ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+#### 3. set up GitHub credentials
+[Generating SSH keys](https://help.github.com/articles/generating-ssh-keys/)
 
-#### 4. install homebrew-cask
-`brew install caskroom/cask/brew-cask`
-
-#### 5. brew installs
-`brew install gifify git gti heroku-toolbelt imagemagick lame mysql node postgresql rbenv ruby-build sqlite tig youtube-dl`
-
-#### 6. add homebrew-fonts tap
-`brew tap caskroom/fonts`
-
-#### 7. cask installs
-`brew cask install alfred atom bettertouchtool daisydisk dash dropbox flux font-open-sans font-roboto-mono font-source-code-pro google-drive google-photos-backup heroku-toolbelt imageoptim istat-menus kaleidoscope mysqlworkbench scroll-reverser spotify steam textual the-unarchiver transmission vlc`
-
-#### 8. Mac App Store installs
-* Amphetamine
-* LastPass
-* Leaf
-* Pocket
-* Pomodoro
-* Pushbullet
-
-#### 9. activate licenses
-* Alfred
-* Dash
-* iStat Menus
-* Kaleidoscope
-
-#### 10. restore preferences
-* Alfred
-* BetterTouchTool
-* Dash
-* iStat Menus
-
-#### 11. set up GitHub credentials
-* [Generating SSH keys](https://help.github.com/articles/generating-ssh-keys/)
-
-* restore .ssh directory
-
-#### 12. clone dotfiles repo
+#### 4. clone dotfiles repo
 `cd github`
 
 `git clone git@github.com:goronfreeman/dotfiles.git`
 
-#### 13. symlink files
+#### 5. symlink files
 `ln -s ~/github/dotfiles/.scss-lint.yml ~`
 
 `ln -s ~/github/dotfiles/oh_my_zsh/.aliasrc ~`
@@ -60,6 +23,41 @@
 `ln -s ~/github/dotfiles/oh_my_zsh/.zshrc ~`
 
 `ln -s ~/github/dotfiles/oh_my_zsh/functions.zsh ~/.oh-my-zsh/lib/`
+
+#### 6. install homebrew
+`ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+
+#### 7. install homebrew-cask
+`brew install caskroom/cask/brew-cask`
+
+#### 8. brew installs
+`brew install gifify git gti heroku-toolbelt imagemagick lame mysql node postgresql rbenv ruby-build sqlite tig youtube-dl`
+
+#### 9. add homebrew-fonts tap
+`brew tap caskroom/fonts`
+
+#### 10. cask installs
+`brew cask install alfred atom bettertouchtool daisydisk dash dropbox flux font-open-sans font-roboto-mono font-source-code-pro google-drive google-photos-backup heroku-toolbelt imageoptim istat-menus kaleidoscope mysqlworkbench scroll-reverser spotify steam textual the-unarchiver transmission vlc`
+
+#### 11. Mac App Store installs
+* Amphetamine
+* LastPass
+* Leaf
+* Pocket
+* Pomodoro
+* Pushbullet
+
+#### 12. activate licenses
+* Alfred
+* Dash
+* iStat Menus
+* Kaleidoscope
+
+#### 13. restore preferences
+* Alfred
+* BetterTouchTool
+* Dash
+* iStat Menus
 
 #### 14. restore Atom settings
 1. `apm install sync-settings`
