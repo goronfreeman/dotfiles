@@ -39,7 +39,11 @@
 #### 10. cask installs
 `brew cask install alfred atom bettertouchtool daisydisk dash dropbox flux font-open-sans font-roboto-mono font-source-code-pro google-drive google-photos-backup heroku-toolbelt imageoptim istat-menus kaleidoscope mysqlworkbench scroll-reverser spotify steam textual the-unarchiver transmission vlc`
 
-#### 11. Mac App Store installs
+#### 11. MySQL config
+1. `ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents`
+2. `launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist`
+
+#### 12. Mac App Store installs
 * Amphetamine
 * LastPass
 * Pocket
@@ -47,25 +51,25 @@
 * Pushbullet
 * Reeder 3
 
-#### 12. activate licenses
+#### 13. activate licenses
 * Alfred
 * Dash
 * iStat Menus
 * Kaleidoscope
 
-#### 13. restore preferences
+#### 14. restore preferences
 * Alfred
 * BetterTouchTool
 * Dash
 * iStat Menus
 
-#### 14. restore Atom settings
+#### 15. restore Atom settings
 1. `apm install sync-settings`
 2. create GitHub token
 3. enter gist ID
 4. Sync Settings: Restore
 
-#### 15. install linters
+#### 16. install linters
 * `npm install -g csslint`
 * `npm install -g eslint`
 * `npm install -g htmlhint`
@@ -74,13 +78,13 @@
 * `gem install rubocop`
 * `gem install scss_lint`
 
-#### 15. disable Mission Control shift binding
+#### 17. disable Mission Control shift binding
 1. `cd ~/Library/Preferences`
 2. `open com.apple.symbolichotkeys.plist`
 3. for items `34`, `35`, and `37`, set `enabled` to `NO`
 4. save and reboot
 
-#### 16. other software installs
+#### 18. other software installs
 * Adobe Illustrator
 * Adobe Photoshop
 * Cubase 6
