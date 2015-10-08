@@ -1,6 +1,6 @@
 #### 1. install Xcode
 1. install from Mac App Store
-2. open to install command line tools
+2. install command line tools: `xcode-select --install`
 
 #### 2. install oh-my-zsh
 `sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
@@ -42,10 +42,10 @@
 #### 11. Mac App Store installs
 * Amphetamine
 * LastPass
-* Leaf
 * Pocket
 * Pomodoro
 * Pushbullet
+* Reeder 3
 
 #### 12. activate licenses
 * Alfred
@@ -65,10 +65,24 @@
 3. enter gist ID
 4. Sync Settings: Restore
 
-#### 15. other software installs
+#### 15. install linters
+* `npm install -g csslint`
+* `npm install -g eslint`
+* `npm install -g htmlhint`
+* `npm install -g js-yaml`
+* `npm install -g jsonlint`
+* `gem install rubocop`
+* `gem install scss_lint`
+
+#### 15. disable Mission Control shift binding
+1. `cd ~/Library/Preferences`
+2. `open com.apple.symbolichotkeys.plist`
+3. for items `34`, `35`, and `37`, set `enabled` to `NO`
+4. save and reboot
+
+#### 16. other software installs
 * Adobe Illustrator
 * Adobe Photoshop
 * Cubase 6
 * Google Chrome
 * Private Internet Access
-* Reeder 3
