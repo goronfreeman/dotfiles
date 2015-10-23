@@ -28,4 +28,7 @@ eval "$(rbenv init -)"
 setopt auto_cd
 cdpath=(. $HOME/github $HOME/Documents/projects )
 
+# remove beeps
+setopt no_beep
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
