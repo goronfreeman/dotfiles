@@ -50,3 +50,6 @@ alias bi="b install --save"
 # other
 alias multizip="zip -r -s 3g archive.zip" #foldername
 alias annotate="annotate --position bottom --exclude tests,fixtures,factories,serializers"
+
+#neovim
+alias vim="nvim"
