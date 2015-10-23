@@ -16,13 +16,11 @@
 #### 5. symlink files
 `ln -s ~/github/dotfiles/.scss-lint.yml ~/`
 
-`ln -s ~/github/dotfiles/.agignore ~/`
+`ln -s ~/github/dotfiles/agignore ~/.agignore`
 
-`ln -s ~/github/dotfiles/oh_my_zsh/.aliasrc ~/`
+`ln -s ~/github/dotfiles/oh_my_zsh/zshenv ~/.zshenv`
 
-`ln -s ~/github/dotfiles/oh_my_zsh/.zshenv ~/`
-
-`ln -s ~/github/dotfiles/oh_my_zsh/.zshrc ~/`
+`ln -s ~/github/dotfiles/oh_my_zsh/zshrc ~/.zshrc`
 
 `ln -s ~/github/dotfiles/oh_my_zsh/custom/alias.zsh ~/.oh-my-zsh/custom/`
 
