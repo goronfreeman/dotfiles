@@ -31,4 +31,7 @@ cdpath=(. $HOME/github $HOME/Documents/projects )
 # remove beeps
 setopt no_beep
 
+# ctrl-D doesn't close terminal window
+stty eof ''
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

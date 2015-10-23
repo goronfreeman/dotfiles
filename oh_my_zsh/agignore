@@ -1,8 +1,12 @@
-/log/
-/logs/
-/images/
-/tmp/
-/vendor/
+Applications/
+Dropbox/OS X/
+Library/
+cache
+log
+logs
+old
+tmp
+vendor
 *.sql
 *.tags*
 *.gemtags*
