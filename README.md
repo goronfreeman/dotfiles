@@ -39,11 +39,12 @@
 #### 8. brew installs
 `brew install fzf gifify git gti heroku-toolbelt imagemagick lame mysql node postgresql rbenv ruby-build sqlite the_silver_searcher tig youtube-dl`
 
-#### 9. add homebrew-fonts tap
-`brew tap caskroom/fonts`
+#### 9. add cask taps
+* `brew tap caskroom/fonts`
+* `brew tap caskroom/versions`
 
 #### 10. cask installs
-`brew cask install alfred atom bettertouchtool daisydisk dash dropbox flux font-open-sans font-roboto-mono font-source-code-pro google-drive google-photos-backup heroku-toolbelt imageoptim istat-menus kaleidoscope mysqlworkbench scroll-reverser spotify steam textual the-unarchiver transmission vlc`
+`brew cask install alfred atom bettertouchtool daisydisk dash dropbox flux font-open-sans font-roboto-mono font-source-code-pro google-drive google-photos-backup heroku-toolbelt imageoptim istat-menus iterm2-beta kaleidoscope mysqlworkbench scroll-reverser spotify steam textual the-unarchiver transmission vlc`
 
 #### 11. install ruby
 1. `rbenv install -l`
