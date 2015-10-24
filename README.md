@@ -11,7 +11,7 @@
 #### 4. clone config repos
 `git clone git@github.com:goronfreeman/dotfiles.git ~/github`
 
-`git clone `
+`git clone git@github.com:goronfreeman/nvimfiles.git ~/github`
 
 #### 5. symlink files
 `ln -s ~/github/dotfiles/.scss-lint.yml ~/`
