@@ -9,9 +9,11 @@
 [Generating SSH keys](https://help.github.com/articles/generating-ssh-keys/)
 
 #### 4. clone config repos
-`git clone git@github.com:goronfreeman/dotfiles.git ~/github`
+`cd github`
 
-`git clone git@github.com:goronfreeman/nvimfiles.git ~/github`
+`git clone git@github.com:goronfreeman/dotfiles.git`
+
+`git clone git@github.com:goronfreeman/nvimfiles.git`
 
 #### 5. symlink files
 `ln -s ~/github/dotfiles/.scss-lint.yml ~/`
