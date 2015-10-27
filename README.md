@@ -114,7 +114,7 @@ _example:_
 4. save and reboot
 
 #### 21. install fzf
-`/usr/local/opt/fzf/./install`
+`/usr/local/Cellar/fzf/HEAD/install`
 
 #### 22. other software installs
 * Adobe Illustrator
