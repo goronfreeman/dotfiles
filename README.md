@@ -9,11 +9,10 @@
 [Generating SSH keys](https://help.github.com/articles/generating-ssh-keys/)
 
 #### 4. clone config repos
-`cd github`
-
-`git clone git@github.com:goronfreeman/dotfiles.git`
-
-`git clone git@github.com:goronfreeman/nvimfiles.git`
+1. `mkdir github`
+2. `cd github`
+3. `git clone git@github.com:goronfreeman/dotfiles.git`
+4. `git clone git@github.com:goronfreeman/nvimfiles.git`
 
 #### 5. symlink files
 `ln -s ~/github/dotfiles/.scss-lint.yml ~/`
@@ -121,5 +120,5 @@ _example:_
 * Adobe Illustrator
 * Adobe Photoshop
 * Cubase 6
-* Google Chrome
-* Private Internet Access
+* [Google Chrome](https://www.google.com/chrome/browser/desktop/#)
+* [Private Internet Access](https://www.privateinternetaccess.com/installer/download_installer_osx)
