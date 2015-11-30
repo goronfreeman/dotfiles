@@ -50,7 +50,7 @@
 `brew tap neovim/neovim`
 
 #### 10. cask installs
-`brew cask install alfred atom bettertouchtool daisydisk dash dropbox flux font-open-sans font-roboto-mono font-source-code-pro google-drive google-photos-backup heroku-toolbelt imageoptim istat-menus iterm2-beta kaleidoscope mysqlworkbench scroll-reverser spotify steam textual the-unarchiver transmission vlc`
+`brew cask install alfred atom bettertouchtool daisydisk dash dropbox flux font-open-sans font-roboto-mono font-source-code-pro google-drive google-photos-backup heroku-toolbelt imageoptim istat-menus iterm2-beta kaleidoscope mysqlworkbench omnigraffle paw scroll-reverser spotify steam textual the-unarchiver transmission vlc`
 
 #### 11. install neovim
 1. `brew install --HEAD neovim`
@@ -80,6 +80,8 @@
 * Dash
 * iStat Menus
 * Kaleidoscope
+* Omnigraffle
+* Paw
 
 #### 16. restore preferences
 * Alfred
