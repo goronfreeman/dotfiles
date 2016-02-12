@@ -40,7 +40,7 @@
 `brew install caskroom/cask/brew-cask`
 
 #### 8. brew installs
-`brew install fzf gifify git gti heroku-toolbelt imagemagick lame mysql node postgresql rbenv ruby-build sqlite the_silver_searcher tig youtube-dl`
+`brew install chruby fzf gifify git gti heroku-toolbelt imagemagick lame mysql node postgresql ruby-install sqlite terminal-notifier the_silver_searcher tig youtube-dl`
 
 #### 9. add cask taps
 `brew tap caskroom/fonts`
@@ -50,7 +50,7 @@
 `brew tap neovim/neovim`
 
 #### 10. cask installs
-`brew cask install alfred atom bettertouchtool daisydisk dash dropbox flux font-open-sans font-roboto-mono font-source-code-pro google-drive google-photos-backup heroku-toolbelt imageoptim istat-menus iterm2-beta kaleidoscope mysqlworkbench omnigraffle paw scroll-reverser spotify steam textual the-unarchiver transmission vlc`
+`brew cask install airmail-beta alfred appcleaner atom bettertouchtool daisydisk dash dropbox flux font-open-sans font-roboto-mono font-source-code-pro google-drive google-photos-backup heroku-toolbelt imageoptim istat-menus iterm2-beta kaleidoscope linear mysqlworkbench openemu paw scroll-reverser spotify steam the-unarchiver transmission vlc`
 
 #### 11. install neovim
 1. `brew install --HEAD neovim`
@@ -58,10 +58,9 @@
 3. `sudo -H pip install neovim`
 4. `:PlugInstall`
 
-#### 12. install ruby
-1. `rbenv install -l`
-2. `rbenv install <latest_version>`
-3. `rbenv global <latest_version>`
+### 12. install ruby (ruby-install & chruby)
+1. `ruby-install ruby <version>`
+2. `echo 'ruby-<latest_version>' > ~/.ruby-version`
 
 #### 13. MySQL config
 1. `ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents`
@@ -72,11 +71,12 @@
 * LastPass
 * Pocket
 * Pomodoro
-* Pushbullet
 * Reeder 3
+* Textual
 
 #### 15. activate licenses
 * Alfred
+* BetterTouchTool
 * Dash
 * iStat Menus
 * Kaleidoscope
@@ -99,15 +99,16 @@
 `npm install -g csslint eslint htmlhint js-yaml jsonlint && gem install rubocop scss_lint`
 
 #### 19. rubocop config
-1. `curl https://gist.githubusercontent.com/goronfreeman/b13d44c9d5c02e689a44/raw/a2f6c26e11081cd82a4b1937f4ac243f610d5bf3/default.yml > /usr/local/opt/rbenv/versions/<ruby_global_version>/lib/ruby/gems/<ruby_base_version>/gems/rubocop-<rubocop_version>/config/default.yml`
+1. `curl https://gist.githubusercontent.com/goronfreeman/b13d44c9d5c02e689a44/raw/a2f6c26e11081cd82a4b1937f4ac243f610d5bf3/default.yml > /Users/hbraun/.gem/ruby/<ruby_version>/gems/rubocop-<rubocop_version>/config/default.yml`
 
-2. `curl https://gist.githubusercontent.com/goronfreeman/b13d44c9d5c02e689a44/raw/a2f6c26e11081cd82a4b1937f4ac243f610d5bf3/disabled.yml > /usr/local/opt/rbenv/versions/<ruby_global_version>/lib/ruby/gems/<ruby_base_version>/gems/rubocop-<rubocop_version>/config/disabled.yml`
+2. `curl https://gist.githubusercontent.com/goronfreeman/b13d44c9d5c02e689a44/raw/a2f6c26e11081cd82a4b1937f4ac243f610d5bf3/disabled.yml > /Users/hbraun/.gem/ruby/<ruby_version>/gems/rubocop-<rubocop_version>/config/disabled.yml`
 
-3. `curl https://gist.githubusercontent.com/goronfreeman/b13d44c9d5c02e689a44/raw/a2f6c26e11081cd82a4b1937f4ac243f610d5bf3/enabled.yml > /usr/local/opt/rbenv/versions/<ruby_global_version>/lib/ruby/gems/<ruby_base_version>/gems/rubocop-<rubocop_version>/config/enabled.yml`
+3. `curl https://gist.githubusercontent.com/goronfreeman/b13d44c9d5c02e689a44/raw/a2f6c26e11081cd82a4b1937f4ac243f610d5bf3/enabled.yml >
+/Users/hbraun/.gem/ruby/<ruby_version>/gems/rubocop-<rubocop_version>/config/enabled.yml`
 
 _example:_
 
-`curl https://gist.githubusercontent.com/goronfreeman/b13d44c9d5c02e689a44/raw/a2f6c26e11081cd82a4b1937f4ac243f610d5bf3/default.yml > /usr/local/opt/rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/rubocop-0.34.2/config/default.yml`
+`curl https://gist.githubusercontent.com/goronfreeman/b13d44c9d5c02e689a44/raw/a2f6c26e11081cd82a4b1937f4ac243f610d5bf3/default.yml > /Users/hbraun/.gem/ruby/2.3.0/gems/rubocop-0.35.1/config/default.yml`
 
 #### 20. disable Mission Control shift binding
 1. `cd ~/Library/Preferences`
