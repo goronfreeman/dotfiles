@@ -4,32 +4,34 @@
 # git
 alias g="git"
 
-alias gs="g status"
-alias gst="g stash"
-alias gco="g checkout"
-alias gc="g commit -m"
 alias ga="g add"
+alias gb="gco -b"
+alias gc="g commit -m"
+alias gco="g checkout"
+alias gdt="g difftool"
 alias gm="g merge"
 alias gmt="g mergetool"
 alias gp="g push"
 alias gpo="gp -u origin"
-alias gb="gco -b"
+alias gs="g status"
+alias gst="g stash"
 alias gup="g pull --rebase"
 
 # rails
-alias rc="be rails c"
-alias rs="be rails s"
-alias rt="be rake test"
-alias rg="rails generate"
+alias rc="be bin/rails c"
+alias rs="be bin/rails s"
+alias rg="bin/rails generate"
 alias rgm="rg migration"
 alias rgc="rg controller"
 
 # bundler
 alias be="bundle exec"
 alias ber="be rake"
+alias rr="rake routes"
 
 # homebrew
-alias brewup="brew update && brew upgrade --all && brew cleanup -s && brew prune && brew cask cleanup"
+alias brewup="brew update"
+alias brewup="brew update && brew upgrade --cleanup && brew cleanup -s && brew prune && brew cask cleanup"
 
 # python
 alias pyserv="python -m SimpleHTTPServer"
@@ -37,15 +39,9 @@ alias pyserv="python -m SimpleHTTPServer"
 # database
 alias dbd="ber db:drop"
 alias dbc="ber db:create"
-alias dbtp="ber db:test:prepare"
 alias dbm="ber db:migrate"
 alias dbs="ber db:seed"
-alias dbr="dbm && ber db:reset"
 alias dbrb="dbd && dbc && dbm"
-
-# bower
-alias b="bower"
-alias bi="b install --save"
 
 # other
 alias multizip="zip -r -s 3g archive.zip" #foldername
