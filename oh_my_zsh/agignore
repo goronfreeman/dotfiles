@@ -4,6 +4,7 @@ Library/
 cache
 log
 logs
+node_modules
 old
 tmp
 vendor
