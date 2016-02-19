@@ -62,8 +62,8 @@
 4. `:PlugInstall`
 
 ### 12. install ruby (ruby-install & chruby)
-1. `ruby-install ruby <version>`
-2. `echo 'ruby-<latest_version>' > ~/.ruby-version`
+1. `ruby-install ruby`
+2. `echo "ruby-$(ruby -e 'print RUBY_VERSION')" > ~/.ruby-version`
 
 #### 13. MySQL config
 1. `ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents`
