@@ -13,6 +13,7 @@
 2. `cd github`
 3. `git clone git@github.com:goronfreeman/dotfiles.git`
 4. `git clone git@github.com:goronfreeman/nvimfiles.git`
+5. 'git clone git@github.com:zsh-users/zsh-syntax-highlighting.git'
 
 #### 5. symlink files
 `ln -s ~/github/dotfiles/linter_config/scss-lint.yml ~/.scss-lint.yml`
