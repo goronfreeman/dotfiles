@@ -101,16 +101,12 @@
 `npm install -g csslint eslint htmlhint js-yaml jsonlint && gem install rubocop scss_lint`
 
 #### 19. rubocop config
-1. `curl https://gist.githubusercontent.com/goronfreeman/b13d44c9d5c02e689a44/raw/a2f6c26e11081cd82a4b1937f4ac243f610d5bf3/default.yml > /Users/hbraun/.gem/ruby/<ruby_version>/gems/rubocop-<rubocop_version>/config/default.yml`
+1. `curl https://gist.githubusercontent.com/goronfreeman/b13d44c9d5c02e689a44/raw/a2f6c26e11081cd82a4b1937f4ac243f610d5bf3/default.yml > /Users/hbraun/.gem/ruby/$(ruby -e 'print RUBY_VERSION')/gems/rubocop-$(rubocop -v)/config/default.yml`
 
-2. `curl https://gist.githubusercontent.com/goronfreeman/b13d44c9d5c02e689a44/raw/a2f6c26e11081cd82a4b1937f4ac243f610d5bf3/disabled.yml > /Users/hbraun/.gem/ruby/<ruby_version>/gems/rubocop-<rubocop_version>/config/disabled.yml`
+2. `curl https://gist.githubusercontent.com/goronfreeman/b13d44c9d5c02e689a44/raw/a2f6c26e11081cd82a4b1937f4ac243f610d5bf3/disabled.yml > /Users/hbraun/.gem/ruby/$(ruby -e 'print RUBY_VERSION')/gems/rubocop-$(rubocop -v)/config/disabled.yml`
 
 3. `curl https://gist.githubusercontent.com/goronfreeman/b13d44c9d5c02e689a44/raw/a2f6c26e11081cd82a4b1937f4ac243f610d5bf3/enabled.yml >
-/Users/hbraun/.gem/ruby/<ruby_version>/gems/rubocop-<rubocop_version>/config/enabled.yml`
-
-_example:_
-
-`curl https://gist.githubusercontent.com/goronfreeman/b13d44c9d5c02e689a44/raw/a2f6c26e11081cd82a4b1937f4ac243f610d5bf3/default.yml > /Users/hbraun/.gem/ruby/2.3.0/gems/rubocop-0.35.1/config/default.yml`
+/Users/hbraun/.gem/ruby/$(ruby -e 'print RUBY_VERSION')/gems/rubocop-$(rubocop -v)/config/enabled.yml`
 
 #### 20. disable Mission Control shift binding
 1. `cd ~/Library/Preferences`
