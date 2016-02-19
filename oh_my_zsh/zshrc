@@ -29,6 +29,9 @@ source /usr/local/opt/chruby/share/chruby/auto.sh
 setopt auto_cd
 cdpath=(. $HOME/github $HOME/Documents/projects )
 
+# set default command line editor
+export EDITOR=/usr/local/bin/nvim
+
 # remove beeps
 setopt no_beep
 
