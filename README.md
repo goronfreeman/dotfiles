@@ -13,9 +13,12 @@
 2. `cd github`
 3. `git clone git@github.com:goronfreeman/dotfiles.git`
 4. `git clone git@github.com:goronfreeman/nvimfiles.git`
-5. 'git clone git@github.com:zsh-users/zsh-syntax-highlighting.git'
+5. `cd .oh-my-zsh/custom/plugins/`
+6. `git clone git@github.com:zsh-users/zsh-syntax-highlighting.git`
 
 #### 5. symlink files
+`ln -s ~/github/dotfiles/gitconfig ~/.gitconfig`
+
 `ln -s ~/github/dotfiles/linter_config/scss-lint.yml ~/.scss-lint.yml`
 
 `ln -s ~/github/dotfiles/linter_config/eslintrc ~/.eslintrc`
@@ -53,7 +56,7 @@
 `brew tap neovim/neovim`
 
 #### 10. cask installs
-`brew cask install airmail-beta alfred appcleaner atom bettertouchtool daisydisk dash dropbox flux font-open-sans font-roboto-mono font-source-code-pro google-drive google-photos-backup heroku-toolbelt imageoptim istat-menus iterm2-beta kaleidoscope linear mysqlworkbench openemu paw scroll-reverser spotify steam the-unarchiver transmission vlc`
+`brew cask install airmail-beta alfred appcleaner atom bettertouchtool daisydisk dash dropbox flux font-open-sans font-roboto-mono font-source-code-pro google-chrome google-chrome-canary google-drive google-photos-backup heroku-toolbelt imageoptim istat-menus iterm2-beta kaleidoscope linear mysqlworkbench openemu paw scroll-reverser spotify steam the-unarchiver transmission vlc`
 
 #### 11. install neovim
 1. `brew install --HEAD neovim`
@@ -61,7 +64,7 @@
 3. `sudo -H pip install neovim`
 4. `:PlugInstall`
 
-### 12. install ruby (ruby-install & chruby)
+#### 12. install ruby (ruby-install & chruby)
 1. `ruby-install ruby`
 2. `echo "ruby-$(ruby -e 'print RUBY_VERSION')" > ~/.ruby-version`
 
@@ -94,7 +97,7 @@
 
 #### 17. restore Atom settings
 1. `apm install sync-settings`
-2. create GitHub token
+2. create [GitHub token](https://github.com/settings/tokens)
 3. enter gist ID
 4. Sync Settings: Restore
 
@@ -116,11 +119,10 @@
 4. save and reboot
 
 #### 21. install fzf
-`/usr/local/Cellar/fzf/HEAD/install`
+`/usr/local/opt/fzf/install`
 
 #### 22. other software installs
 * Adobe Illustrator
 * Adobe Photoshop
 * Cubase 6
-* [Google Chrome](https://www.google.com/chrome/browser/desktop/#)
 * [Private Internet Access](https://www.privateinternetaccess.com/installer/download_installer_osx)
