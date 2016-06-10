@@ -33,6 +33,9 @@ alias rr="rake routes"
 alias brewup="brew update"
 alias brewup="brew update && brew upgrade --cleanup && brew cleanup -s && brew prune && brew cask cleanup"
 
+# bower
+alias bower='noglob bower'
+
 # python
 alias pyserv="python -m SimpleHTTPServer"
 
@@ -48,6 +51,7 @@ alias multizip="zip -r -s 3g archive.zip" #foldername
 alias annotate="annotate --position bottom --exclude tests,fixtures,factories,serializers"
 alias kbdisable="sudo kextunload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/ 2>/dev/null"
 alias kbenable="sudo kextload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/"
+alias weather="curl "http://wttr.in/${1-}""
 
 #neovim
 alias vim="nvim"
