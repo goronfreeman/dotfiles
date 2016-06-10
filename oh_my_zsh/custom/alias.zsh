@@ -53,5 +53,8 @@ alias kbdisable="sudo kextunload /System/Library/Extensions/AppleUSBTopCase.kext
 alias kbenable="sudo kextload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/"
 alias weather="curl "http://wttr.in/${1-}""
 
-#neovim
+# neovim
 alias vim="nvim"
+
+# vagrant
+alias vu="vagrant up && vagrant ssh"
