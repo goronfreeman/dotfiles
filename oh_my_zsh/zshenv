@@ -1,4 +1,6 @@
-# Symlink path:
-#   ln -s ~/github/dotfiles/oh_my_zsh/.zshenv ~
-
 export HOMEBREW_CASK_OPTS='--appdir=/Applications'
+HOMEBREW_NO_ANALYTICS=1
+
+# go
+export GOPATH=$HOME/code/go
+export PATH=$PATH:$GOPATH/bin
