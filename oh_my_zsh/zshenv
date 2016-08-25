@@ -4,3 +4,6 @@ HOMEBREW_NO_ANALYTICS=1
 # go
 export GOPATH=$HOME/code/go
 export PATH=$PATH:$GOPATH/bin
+
+# elixir
+export PATH="$PATH:/usr/local/bin/elixir"
