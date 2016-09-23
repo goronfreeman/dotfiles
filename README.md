@@ -13,8 +13,9 @@
 2. `cd github`
 3. `git clone git@github.com:goronfreeman/dotfiles.git`
 4. `git clone git@github.com:goronfreeman/nvimfiles.git`
-5. `cd .oh-my-zsh/custom/plugins/`
+5. `cd ~/.oh-my-zsh/custom/plugins/`
 6. `git clone git@github.com:zsh-users/zsh-syntax-highlighting.git`
+7. `git clone git@github.com:zsh-users/zsh-history-substring-search.git`
 
 #### 5. symlink files
 `ln -s ~/github/dotfiles/gitconfig ~/.gitconfig`
@@ -35,15 +36,12 @@
 
 `ln -s ~/github/dotfiles/oh_my_zsh/functions.zsh ~/.oh-my-zsh/lib/`
 
-`ln -s ~/github/nvimfiles/nvimrc ~/.nvimrc`
+`ln -s ~/github/nvimfiles/init.vim ~/.config/nvim/init.vim`
 
-`ln -s ~/github/nvimfiles/autoload/ ~/.nvim/`
+`ln -s ~/github/nvimfiles/autoload/ ~/.config/nvim/`
 
 #### 6. install homebrew
 `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-
-#### 7. install homebrew-cask
-`brew install caskroom/cask/brew-cask`
 
 #### 8. brew installs
 `brew install chruby fzf gifify git gti heroku-toolbelt imagemagick lame mysql node postgresql ruby-install sqlite terminal-notifier the_silver_searcher tig youtube-dl`
@@ -60,9 +58,7 @@
 
 #### 11. install neovim
 1. `brew install --HEAD neovim`
-2. `sudo easy_install pip`
-3. `sudo -H pip install neovim`
-4. `:PlugInstall`
+2. `:PlugInstall`
 
 #### 12. install ruby (ruby-install & chruby)
 1. `ruby-install ruby`
@@ -105,12 +101,8 @@
 `npm install -g csslint eslint htmlhint js-yaml jsonlint && gem install rubocop scss_lint`
 
 #### 19. rubocop config
-1. `curl https://gist.githubusercontent.com/goronfreeman/b13d44c9d5c02e689a44/raw/a2f6c26e11081cd82a4b1937f4ac243f610d5bf3/default.yml > /Users/hbraun/.gem/ruby/$(ruby -e 'print RUBY_VERSION')/gems/rubocop-$(rubocop -v)/config/default.yml`
 
-2. `curl https://gist.githubusercontent.com/goronfreeman/b13d44c9d5c02e689a44/raw/a2f6c26e11081cd82a4b1937f4ac243f610d5bf3/disabled.yml > /Users/hbraun/.gem/ruby/$(ruby -e 'print RUBY_VERSION')/gems/rubocop-$(rubocop -v)/config/disabled.yml`
-
-3. `curl https://gist.githubusercontent.com/goronfreeman/b13d44c9d5c02e689a44/raw/a2f6c26e11081cd82a4b1937f4ac243f610d5bf3/enabled.yml >
-/Users/hbraun/.gem/ruby/$(ruby -e 'print RUBY_VERSION')/gems/rubocop-$(rubocop -v)/config/enabled.yml`
+`curl https://gist.github.com/goronfreeman/0e67f42e4339faf62374f35bb2383c92 > /Users/hbraun/.rubocop.yml`
 
 #### 20. disable Mission Control shift binding
 1. `cd ~/Library/Preferences`
