@@ -102,7 +102,7 @@
 
 #### 19. rubocop config
 
-`curl https://gist.github.com/goronfreeman/0e67f42e4339faf62374f35bb2383c92 > /Users/hbraun/.rubocop.yml`
+`curl https://gist.githubusercontent.com/goronfreeman/0e67f42e4339faf62374f35bb2383c92/raw/01c6bbf8281baedaf1ec9cbd8abe316ff66539e5/.rubocop.yml > /Users/hbraun/.rubocop.yml`
 
 #### 20. disable Mission Control shift binding
 1. `cd ~/Library/Preferences`
