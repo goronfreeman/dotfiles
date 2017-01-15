@@ -1,0 +1,14 @@
+Rails:
+  Enabled: true
+
+Documentation:
+  Enabled: false
+
+Style/Lambda:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Bundler/OrderedGems:
+  Enabled: false
