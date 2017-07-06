@@ -16,6 +16,7 @@ alias gpo="gp -u origin"
 alias gs="g status"
 alias gst="g stash"
 alias gup="g pull --rebase"
+alias gl="g log"
 
 # rails
 alias rc="be bin/rails c"
@@ -60,3 +61,6 @@ alias vim="nvim"
 alias vu="vagrant up && vagrant ssh"
 alias vh="vagrant halt"
 alias vssh="vagrant ssh"
+
+# docker
+alias dc="docker-compose"
