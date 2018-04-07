@@ -58,9 +58,6 @@ alias bower='noglob bower'
 # python
 alias pyserv="python -m SimpleHTTPServer"
 
-# atom
-alias atom="atom ."
-
 # misc
 alias ll="ls -lah"
 alias trash="rm -rf"
