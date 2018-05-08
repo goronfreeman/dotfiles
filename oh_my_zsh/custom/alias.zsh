@@ -46,23 +46,8 @@ alias brewup="brew update && brew upgrade --cleanup && brew cleanup -s && brew p
 # neovim
 alias vim="nvim"
 
-# docker
-alias dc="docker-compose"
-
-# foreman
-alias fs="foreman start"
-
-# bower
-alias bower='noglob bower'
-
-# python
-alias pyserv="python -m SimpleHTTPServer"
-
 # misc
 alias ll="ls -lah"
 alias trash="rm -rf"
 alias multizip="zip -r -s 3g archive.zip" #foldername
 alias annotate="annotate --position bottom --exclude tests,fixtures,factories,serializers"
-alias kbdisable="sudo kextunload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/ 2>/dev/null"
-alias kbenable="sudo kextload /System/Library/Extensions/AppleUSBTopCase.kext/Contents/PlugIns/AppleUSBTCKeyboard.kext/"
-alias weather="curl "http://wttr.in/${1-}""
