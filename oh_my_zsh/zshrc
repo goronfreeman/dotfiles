@@ -11,7 +11,7 @@ ZSH_THEME="dracula"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(rails ruby colored-man-pages zsh-syntax-highlighting)
+plugins=(zsh-syntax-highlighting)
 
 # User configuration
 
@@ -38,4 +38,5 @@ setopt no_beep
 # ctrl-D doesn't close terminal window
 stty eof ''
 
+DISABLE_UPDATE_PROMPT=true
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
