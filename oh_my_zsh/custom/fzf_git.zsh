@@ -53,10 +53,13 @@ git_h() {
 
 git_r() {
   if is_in_git_repo; then
-    git remote -v | awk '{print $1 "\t" $2}' | uniq |
-      fzf-tmux --tac \
-      --preview 'git log --oneline --graph --date=short --pretty="format:%C(auto)%cd %h%d %s" {1} | head -200' |
-      cut -d$'\t' -f1
+    local file=$(git diff --name-only --cached --color=always |
+      fzf-tmux --multi --preview-window right:70% \
+      --preview 'cat {} | head -'$LINES)
+
+    if [[ $file ]]; then
+      git reset --quiet $file
+    fi
   fi
 }
 
