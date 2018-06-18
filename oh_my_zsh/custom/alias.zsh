@@ -38,6 +38,8 @@ alias dbd="ber db:drop"
 alias dbc="ber db:create"
 alias dbm="ber db:migrate"
 alias dbmt="dbm RAILS_ENV=test"
+alias dbr="ber db:rollback"
+alias dbrt="dbr RAILS_ENV=test"
 alias dbs="ber db:seed"
 alias dbrb="dbd && dbc && dbm"
 
