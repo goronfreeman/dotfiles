@@ -1,7 +1,21 @@
 # https://gist.github.com/junegunn/8b572b8d4b5eddd8b85e5f4d40f17236
+# https://www.martin-brennan.com/git-shortcuts-with-fzf/
 
 is_in_git_repo() {
   git rev-parse HEAD > /dev/null 2>&1
+}
+
+git_a() {
+  if is_in_git_repo; then
+    local file=$(git -c color.status=always status --short |
+      fzf-tmux -m --ansi --nth 2..,.. \
+      --preview '(git diff --color=always -- {-1} | sed 1,4d; cat {-1}) | head -500' |
+      cut -c4- | sed 's/.* -> //')
+
+    if [[ $file ]]; then
+      git add $file
+    fi
+  fi
 }
 
 git_b() {
