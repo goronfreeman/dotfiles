@@ -6,11 +6,15 @@ is_in_git_repo() {
 
 git_b() {
   if is_in_git_repo; then
-    git branch -a --color=always | grep -v '/HEAD\s' | sort |
+    local branch=$(git branch -a --color=always | grep -v '/HEAD\s' | sort |
       fzf-tmux --ansi --multi --tac --preview-window right:70% \
       --preview 'git log --oneline --graph --date=short --pretty="format:%C(auto)%cd %h%d %s" $(sed s/^..// <<< {} | cut -d" " -f1) | head -'$LINES |
       sed 's/^..//' | cut -d' ' -f1 |
-      sed 's#^remotes/##'
+      sed 's#^remotes/##')
+
+    if [[ $branch ]]; then
+      git checkout --quiet $branch
+    fi
   fi
 }
 
