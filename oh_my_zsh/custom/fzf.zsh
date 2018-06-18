@@ -13,7 +13,9 @@ bindkey '^P' fzf-file-widget
 bindkey '^H' fzf-history-widget
 bindkey '^D' fzf-cd-widget
 
-# fk - kill process
+# Kill a process
+# Type fk to get a list of running processes
+# enter will kill the selected process
 fk() {
   local pid=$(ps -ef | sed 1d | fzf-tmux -m | awk '{print $2}')
 
@@ -22,11 +24,11 @@ fk() {
   fi
 }
 
-# fstash - easier way to deal with stashes
-# type fstash to get a list of your stashes
+# Easy way to deal with Git stashes
+# Type fstash to get a list of your stashes
 # enter shows you the contents of the stash
 # ctrl-d shows a diff of the stash against your current HEAD
-# ctrl-b checks the stash out as a branch, for easier merging
+# ctrl-b checks the stash out as a branch for easier merging
 fstash() {
   local out q k sha
 
