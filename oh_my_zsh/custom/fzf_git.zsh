@@ -48,9 +48,13 @@ git_r() {
 
 git_t() {
   if is_in_git_repo; then
-    git tag --sort -version:refname |
+    local tag=$(git tag --sort -version:refname |
       fzf-tmux --multi --preview-window right:70% \
-      --preview 'git show --color=always {} | head -'$LINES
+      --preview 'git show --color=always {} | head -'$LINES)
+  fi
+
+  if [[ $tag ]]; then
+    git checkout --quiet $tag
   fi
 }
 
