@@ -72,67 +72,90 @@ fshow() {
 FZF-EOF"
 }
 
-# Install (one or multiple) selected application(s)
-# using "brew search" as source input
-# mnemonic [B]rew [I]nstall [P]lugin
+# Install or open the webpage for the selected application
+# using "brew search" as the source input,
+# and display a preview window for the currently marked application.
+# [B]rew [I]nstall [P]ackage
 bip() {
-  local inst=$(brew search | fzf -m)
+  local formula=$(brew search | fzf-tmux --query="$1" +m --preview 'brew info {}')
 
-  if [[ $inst ]]; then
-    for prog in $(echo $inst);
-    do; brew install $prog; done;
+  if [[ $formula ]]; then
+    printf "(I)nstall or open the (h)omepage of $formula "
+    read -r input
+
+    if [[ $input = "h" ]] || [[ $input = "H" ]]; then
+      brew home $formula
+    elif [[ $input = "i" ]] || [[ $input = "I" ]] || [[ $input = "" ]]; then
+      brew install $formula
+    fi
   fi
 }
 
-# Delete (one or multiple) selected application(s)
-# mnemonic [B]rew [C]lean [P]lugin (e.g. uninstall)
+# Uninstall the selected application using "brew leaves" as the input source,
+# and display a preview window for the currently marked application.
+# [B]rew [C]lean [P]ackage
 bcp() {
-  local uninst=$(brew leaves | fzf -m)
+  local formula=$(brew leaves | fzf-tmux --query="$1" +m --preview 'brew info {}')
 
-  if [[ $uninst ]]; then
-    for prog in $(echo $uninst);
-    do; brew uninstall $prog; done;
+  if [[ $formula ]]; then
+    printf "Are you sure you want to uninstall $formula? (y/N) "
+    read -r input
+
+    if [[ $input = "y" ]] || [[ $input = "Y" ]]; then
+      brew uninstall $formula
+    fi
+  fi
+}
+
+# Check for any outdated formulae using "brew outdated" as the input source,
+# and display a preview window for the currently marked application
+# [B]rew [O]utdated [P]acakges
+bop() {
+  local formula=$(brew outdated | fzf-tmux --query="$1" +m --preview 'brew info {}')
+
+  if [[ $formula ]]; then
+    printf "Do you want to upgrade $formula? (Y/n) "
+    read -r input
+
+    if [[ $input = "y" ]] || [[ $input = "Y" ]] || [[ $input == "" ]]; then
+      brew upgrade $formula
+    fi
   fi
 }
 
 # Install or open the webpage for the selected application
-# using brew cask search as input source
-# and display a info quickview window for the currently marked application
+# using "brew cask search" as the input source,
+# and display a preview window for the currently marked application.
+# [C]ask [I]nstall [P]ackage
 cip() {
-    local token
-    token=$(brew cask search | fzf-tmux --query="$1" +m --preview 'brew cask info {}')
+  local formula=$(brew cask search | fzf-tmux --query="$1" +m --preview 'brew cask info {}')
 
-    if [ "x$token" != "x" ]
-    then
-        echo "(I)nstall or open the (h)omepage of $token"
-        read input
-        if [ $input = "i" ] || [ $input = "I" ]; then
-            brew cask install $token
-        fi
-        if [ $input = "h" ] || [ $input = "H" ]; then
-            brew cask home $token
-        fi
+  if [[ $formula ]]; then
+    printf "(I)nstall or open the (h)omepage of $formula "
+    read -r input
+
+    if [[ $input = "h" ]] || [[ $input = "H" ]]; then
+      brew cask home $formula
+    elif [[ $input = "i" ]] || [[ $input = "I" ]] || [[ $input = "" ]]; then
+      brew cask install $formula
     fi
+  fi
 }
 
-# Uninstall or open the webpage for the selected application
-# using brew list as input source (all brew cask installed applications)
-# and display a info quickview window for the currently marked application
+# Uninstall the selected application using "brew cask list" as the input source,
+# and display a preview window for the currently marked application.
+# [C]ask [C]lean [P]ackage
 ccp() {
-    local token
-    token=$(brew cask list | fzf-tmux --query="$1" +m --preview 'brew cask info {}')
+  local formula=$(brew cask list | fzf-tmux --query="$1" +m --preview 'brew cask info {}')
 
-    if [ "x$token" != "x" ]
-    then
-        echo "(U)ninstall or open the (h)omepage of $token"
-        read input
-        if [ $input = "u" ] || [ $input = "U" ]; then
-            brew cask uninstall $token
-        fi
-        if [ $input = "h" ] || [ $token = "h" ]; then
-            brew cask home $token
-        fi
+  if [[ $formula ]]; then
+    printf "Are you sure you want to uninstall $formula? (y/N) "
+    read -r input
+
+    if [[ $input = "y" ]] || [[ $input = "Y" ]]; then
+      brew cask uninstall $formula
     fi
+  fi
 }
 
 # ----------------------------------------------------------------- #
@@ -185,20 +208,20 @@ git_r() {
   cut -d$'\t' -f1
 }
 
-join-lines() {
+join_lines() {
   local item
   while read item; do
     echo -n "${(q)item} "
   done
 }
 
-bind-git-helper() {
+bind_git_helper() {
   local c
   for c in $@; do
-    eval "fzf-g$c-widget() { local result=\$(git_$c | join-lines); zle reset-prompt; LBUFFER+=\$result }"
+    eval "fzf-g$c-widget() { local result=\$(git_$c | join_lines); zle reset-prompt; LBUFFER+=\$result }"
     eval "zle -N fzf-g$c-widget"
     eval "bindkey '^g^$c' fzf-g$c-widget"
   done
 }
-bind-git-helper f b t r h
-unset -f bind-git-helper
+bind_git_helper f b t r h
+unset -f bind_git_helper
