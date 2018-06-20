@@ -53,3 +53,12 @@ fstash() {
     fi
   done
 }
+
+# chruby integration
+# Type frb to get a list of your installed rubies
+# enter will change to that ruby version
+frb() {
+  local rb
+  rb=$((echo system; chruby | awk '{print $1}' | sed '$d') |
+       fzf-tmux -l 30 +m --reverse) && chruby $rb
+}
