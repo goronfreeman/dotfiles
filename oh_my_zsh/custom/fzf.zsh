@@ -55,10 +55,19 @@ fstash() {
 }
 
 # chruby integration
-# Type frb to get a list of your installed rubies
-# enter will change to that ruby version
+# Type fcr to get a list of your installed rubies
+# enter will change to the selected ruby version
+fcr() {
+  local rb
+  rb=$((echo system; chruby | sed '/*/d' | awk '{print $1}') |
+    fzf-tmux -l 30 +m --reverse) && chruby $rb
+}
+
+# ruby-install integration
+# Type frb for a list of major ruby versions (only MRI for now)
+# enter will download and install the selected ruby version
 frb() {
   local rb
-  rb=$((echo system; chruby | awk '{print $1}' | sed '$d') |
-       fzf-tmux -l 30 +m --reverse) && chruby $rb
+  rb=$((ruby-install | sed -n '/jruby/!p;//q' | sed 1,2d | awk '{print $1}') |
+    fzf-tmux -l 30 +m --reverse) && ruby-install ruby $rb
 }
