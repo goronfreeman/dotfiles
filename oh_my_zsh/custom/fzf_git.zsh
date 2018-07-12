@@ -84,7 +84,7 @@ git_r() {
   if is_in_git_repo; then
     local file=$(git diff --name-only --cached --color=always |
       fzf-tmux --multi --preview-window right:70% \
-      --preview '(coderay {} || cat {}) | head -'$LINES)
+      --preview '(coderay {} || cat {})')
 
     if [[ $file ]]; then
       git reset --quiet $file
