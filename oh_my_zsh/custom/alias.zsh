@@ -49,6 +49,9 @@ alias brewup="brew update && brew upgrade --cleanup && brew cleanup -s && brew p
 # neovim
 alias vim="nvim"
 
+# tmux
+alias mux="tmuxinator"
+
 # misc
 alias ll="ls -lah"
 alias trash="rm -rf"

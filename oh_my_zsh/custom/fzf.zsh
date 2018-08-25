@@ -3,6 +3,7 @@ ag --color-line-number 39 \
    --color-match "30;46" \
    --color-path 32 \
    --files-with-matches \
+   --follow \
    --hidden \
    --path-to-ignore ~/.ignore \
    --skip-vcs-ignores \
@@ -20,7 +21,7 @@ export FZF_DEFAULT_OPTS='
 '
 
 bindkey '^P' fzf-file-widget
-bindkey '^H' fzf-history-widget
+bindkey '^Y' fzf-history-widget
 bindkey '^D' fzf-cd-widget
 
 # Kill a process
