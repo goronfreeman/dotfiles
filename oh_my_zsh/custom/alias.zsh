@@ -44,7 +44,7 @@ alias dbs="ber db:seed"
 alias dbrb="dbd && dbc && dbm"
 
 # homebrew
-alias brewup="brew update && brew upgrade --cleanup && brew cleanup -s && brew prune && brew cask cleanup"
+alias brewup="brew update && brew upgrade --cleanup && brew cleanup -s && brew prune"
 
 # neovim
 alias vim="nvim"
