@@ -1,12 +1,10 @@
 export FZF_DEFAULT_COMMAND='
-ag --color-line-number 39 \
-   --color-match "30;46" \
-   --color-path 32 \
+rg --files              \
    --files-with-matches \
-   --follow \
-   --hidden \
-   --path-to-ignore ~/.ignore \
-   --skip-vcs-ignores \
+   --follow             \
+   --hidden             \
+   --line-number        \
+   --no-ignore-vcs      \
    --smart-case
 '
 
