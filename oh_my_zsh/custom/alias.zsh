@@ -29,9 +29,7 @@ alias rr="rake routes"
 # rails
 alias rc="be bin/rails c"
 alias rs="be bin/rails s"
-alias rg="bin/rails generate"
-alias rgm="rg migration"
-alias rgc="rg controller"
+alias rgm="bin/rails generate migration"
 
 # database
 alias dbd="ber db:drop"
@@ -44,7 +42,7 @@ alias dbs="ber db:seed"
 alias dbrb="dbd && dbc && dbm"
 
 # homebrew
-alias brewup="brew update && brew upgrade --cleanup && brew cleanup -s && brew prune"
+alias brewup="brew update && brew upgrade && brew cleanup -s"
 
 # neovim
 alias vim="nvim"
