@@ -7,3 +7,9 @@ export PATH=$PATH:$GOPATH/bin
 
 # elixir
 export PATH="$PATH:/usr/local/bin/elixir"
+
+# rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
