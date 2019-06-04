@@ -21,24 +21,27 @@ alias gst="g stash"
 alias gup="g pull --rebase"
 alias gl="g log"
 
+# docker
+alias dce="docker-compose exec app"
+
 # bundler
 alias be="bundle exec"
 alias ber="be rake"
-alias rr="rake routes"
 
 # rails
-alias rc="be bin/rails c"
-alias rs="be bin/rails s"
-alias rgm="bin/rails generate migration"
+alias rc="rails c"
+alias rr="rails routes"
+alias rs="rails s"
+alias rgm="rails generate migration"
 
 # database
-alias dbd="ber db:drop"
-alias dbc="ber db:create"
-alias dbm="ber db:migrate"
+alias dbd="rails db:drop"
+alias dbc="rails db:create"
+alias dbm="rails db:migrate"
 alias dbmt="dbm RAILS_ENV=test"
-alias dbr="ber db:rollback"
+alias dbr="rails db:rollback"
 alias dbrt="dbr RAILS_ENV=test"
-alias dbs="ber db:seed"
+alias dbs="rails db:seed"
 alias dbrb="dbd && dbc && dbm"
 
 # homebrew
