@@ -14,6 +14,7 @@ public/webpack
 .vscode
 .rubocop-*
 tags
+!tags/
 *.tmp*
 *.old
 *.plist
