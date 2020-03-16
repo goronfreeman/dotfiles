@@ -15,18 +15,13 @@ alias gdt="g difftool"
 alias gm="g merge"
 alias gmt="g mergetool"
 alias gp="g push"
-alias gpo="gp -u origin"
 alias gs="g status"
 alias gst="g stash"
 alias gup="g pull --rebase"
 alias gl="g log"
 
-# docker
-alias dce="docker-compose exec app"
-
 # bundler
 alias be="bundle exec"
-alias ber="be rake"
 
 # rails
 alias rc="rails c"
@@ -56,5 +51,4 @@ alias mux="tmuxinator"
 # misc
 alias ll="ls -lah"
 alias trash="rm -rf"
-alias multizip="zip -r -s 3g archive.zip" #foldername
 alias annotate="annotate --position bottom --exclude tests,fixtures,factories,serializers"
