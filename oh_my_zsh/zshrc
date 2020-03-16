@@ -15,9 +15,6 @@ plugins=(zsh-syntax-highlighting)
 
 # User configuration
 
-for file in $HOME/.zsh_config.d/*.zsh; do
-  source $file
-done
 source $ZSH/oh-my-zsh.sh
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
@@ -28,7 +25,8 @@ source $ZSH/oh-my-zsh.sh
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
 
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# Load NVM
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 # Autocomplete selected directories without need for cd
 setopt auto_cd
