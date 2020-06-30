@@ -40,7 +40,7 @@ alias dbs="rails db:seed"
 alias dbrb="dbd && dbc && dbm"
 
 # homebrew
-alias brewup="brew update && brew upgrade && brew cleanup -s"
+alias brewup="brew update && brew upgrade && brew cleanup -s && brew cask upgrade"
 
 # neovim
 alias vim="nvim"
